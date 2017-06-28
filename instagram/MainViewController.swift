@@ -22,8 +22,8 @@ class MainViewController: UIViewController {
             if let error = error {
                 print(error.localizedDescription)
             } else {
-                print("log out successful")
                 self.dismiss(animated: true, completion: nil)
+                print("log out successful")
             }
         }
     }

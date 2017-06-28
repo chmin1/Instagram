@@ -48,6 +48,10 @@ class SignUpViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func onDismiss(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
