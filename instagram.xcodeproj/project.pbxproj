@@ -18,6 +18,8 @@
 		F9FCB6A91F0311A4005EDAE5 /* instagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCB6A81F0311A4005EDAE5 /* instagramUITests.swift */; };
 		F9FCB6B71F031A0A005EDAE5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCB6B61F031A0A005EDAE5 /* LoginViewController.swift */; };
 		F9FCB6BD1F035BD5005EDAE5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCB6BC1F035BD5005EDAE5 /* SignUpViewController.swift */; };
+		F9FCB6BF1F041143005EDAE5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCB6BE1F041143005EDAE5 /* MainViewController.swift */; };
+		F9FCB6C11F042C6B005EDAE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCB6C01F042C6B005EDAE5 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		F9FCB6AA1F0311A4005EDAE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9FCB6B61F031A0A005EDAE5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F9FCB6BC1F035BD5005EDAE5 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F9FCB6BE1F041143005EDAE5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F9FCB6C01F042C6B005EDAE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 			children = (
 				F9FCB6BC1F035BD5005EDAE5 /* SignUpViewController.swift */,
 				F9FCB6B61F031A0A005EDAE5 /* LoginViewController.swift */,
+				F9FCB6BE1F041143005EDAE5 /* MainViewController.swift */,
+				F9FCB6C01F042C6B005EDAE5 /* ProfileViewController.swift */,
 				F9FCB6881F0311A4005EDAE5 /* AppDelegate.swift */,
 				F9FCB68C1F0311A4005EDAE5 /* Main.storyboard */,
 				F9FCB68F1F0311A4005EDAE5 /* Assets.xcassets */,
@@ -452,7 +458,9 @@
 			files = (
 				F9FCB6BD1F035BD5005EDAE5 /* SignUpViewController.swift in Sources */,
 				F9FCB6B71F031A0A005EDAE5 /* LoginViewController.swift in Sources */,
+				F9FCB6C11F042C6B005EDAE5 /* ProfileViewController.swift in Sources */,
 				F9FCB6891F0311A4005EDAE5 /* AppDelegate.swift in Sources */,
+				F9FCB6BF1F041143005EDAE5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

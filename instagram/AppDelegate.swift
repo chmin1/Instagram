@@ -25,6 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             configuration.server = "https://ancient-river-16709.herokuapp.com/parse"
         }))
         
+        if let currentUser = PFUser.current() {
+            print("Welcome back \(currentUser.username!) 😀")
+                
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+            window?.rootViewController = mainViewController
+        }
+        
         return true
     }
 

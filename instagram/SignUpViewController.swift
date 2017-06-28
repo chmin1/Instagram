@@ -23,6 +23,10 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onScreenTap(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
     @IBAction func onSignUp(_ sender: Any) {
         //new user object created using Parse
         let newUser = PFUser()
