@@ -13,6 +13,7 @@
 		F94012E91F04331C001B4ECF /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94012E81F04331C001B4ECF /* ComposeViewController.swift */; };
 		F94012EC1F046617001B4ECF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94012EB1F046617001B4ECF /* Post.swift */; };
 		F94012EE1F046730001B4ECF /* InstaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94012ED1F046730001B4ECF /* InstaCell.swift */; };
+		F94012F01F05630E001B4ECF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94012EF1F05630E001B4ECF /* DetailViewController.swift */; };
 		F9FCB6891F0311A4005EDAE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCB6881F0311A4005EDAE5 /* AppDelegate.swift */; };
 		F9FCB68E1F0311A4005EDAE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FCB68C1F0311A4005EDAE5 /* Main.storyboard */; };
 		F9FCB6901F0311A4005EDAE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9FCB68F1F0311A4005EDAE5 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		F94012E81F04331C001B4ECF /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		F94012EB1F046617001B4ECF /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F94012ED1F046730001B4ECF /* InstaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaCell.swift; sourceTree = "<group>"; };
+		F94012EF1F05630E001B4ECF /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F9FCB6851F0311A4005EDAE5 /* instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9FCB6881F0311A4005EDAE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9FCB68D1F0311A4005EDAE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				F9FCB6BE1F041143005EDAE5 /* MainViewController.swift */,
 				F9FCB6C01F042C6B005EDAE5 /* ProfileViewController.swift */,
 				F94012E81F04331C001B4ECF /* ComposeViewController.swift */,
+				F94012EF1F05630E001B4ECF /* DetailViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94012F01F05630E001B4ECF /* DetailViewController.swift in Sources */,
 				F9FCB6BD1F035BD5005EDAE5 /* SignUpViewController.swift in Sources */,
 				F94012EE1F046730001B4ECF /* InstaCell.swift in Sources */,
 				F9FCB6B71F031A0A005EDAE5 /* LoginViewController.swift in Sources */,
