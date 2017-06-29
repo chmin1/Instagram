@@ -12,7 +12,7 @@ import Parse
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    var posts: [PFObject]?
+    var posts: [PFObject]!
     
     var refreshController = UIRefreshControl()
     
@@ -76,6 +76,21 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         refreshController.endRefreshing()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // get selected cell
+        let cell = sender as! UITableViewCell
+        //Grab the index of the selected cell (if not nil)
+        if let indexPath = tableView.indexPath(for: cell) {
+            let post = posts[indexPath.row]
+            
+            // create segue controller
+            let detailVC = segue.destination as! DetailViewController
+            
+            detailVC.posts = post
+
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -87,10 +102,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
+      // Pass the selected object to the new view controller.
+    
     */
 
 }
