@@ -264,7 +264,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="2450.8245877061472"/>
+            <point key="canvasLocation" x="1041" y="2451"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="xNx-Cy-HQf">
@@ -384,13 +384,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRU-ye-hk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041" y="2451"/>
+            <point key="canvasLocation" x="33" y="2451"/>
         </scene>
-        <!--Item-->
+        <!--Feed-->
         <scene sceneID="dJn-jh-LOx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wgN-4s-f24" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4st-El-nk2"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="feed_tab" id="4st-El-nk2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kVX-My-Phw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -405,11 +405,11 @@
             </objects>
             <point key="canvasLocation" x="-881" y="1638"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="k94-l8-nRa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aWz-SC-h5T" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="OtP-Ec-bgH"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile_tab" id="OtP-Ec-bgH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gWb-Vo-EPk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -422,13 +422,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCL-Re-TLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041" y="1638"/>
+            <point key="canvasLocation" x="33" y="1638"/>
         </scene>
-        <!--Item-->
+        <!--camera-->
         <scene sceneID="WvA-1h-fyL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BIe-4K-4ru" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="eGc-48-Egh"/>
+                    <tabBarItem key="tabBarItem" title="camera" image="insta_camera_btn" id="eGc-48-Egh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1SY-kK-IWB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -441,7 +441,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOl-CY-aq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="1638"/>
+            <point key="canvasLocation" x="1041" y="1638"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="feed_tab" width="25" height="25"/>
+        <image name="insta_camera_btn" width="25" height="25"/>
+        <image name="profile_tab" width="25" height="25"/>
+    </resources>
 </document>
