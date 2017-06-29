@@ -90,26 +90,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="379" id="aJo-1p-cCH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstaCell" rowHeight="379" id="aJo-1p-cCH" customClass="InstaCell" customModule="instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="379"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aJo-1p-cCH" id="GhP-R7-vMQ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="378.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGY-mH-iXh">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGY-mH-iXh" customClass="PFImageView">
                                                     <rect key="frame" x="0.0" y="8" width="375" height="321"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Caption" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-6k-BZn">
-                                                    <rect key="frame" x="0.0" y="337" width="375" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9V-1x-z5Z">
+                                                    <rect key="frame" x="8" y="337" width="359" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caption" destination="Z9V-1x-z5Z" id="k0f-xM-iXP"/>
+                                            <outlet property="instaImage" destination="AGY-mH-iXh" id="4n4-Ik-oom"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -133,6 +137,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="4Xj-U9-ZLT" id="rtV-Kd-gRC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVF-j1-J4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,17 +157,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f40-IM-bmb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="355"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f40-IM-bmb">
+                                <rect key="frame" x="70" y="72" width="235" height="235"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.28709925518134716" green="0.28709925518134716" blue="0.28709925518134716" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="FRU-gY-KpG" appends="YES" id="t0M-ZK-xQM"/>
+                                    <outletCollection property="gestureRecognizers" destination="CBw-tq-wm7" appends="YES" id="qhR-F1-ACC"/>
                                 </connections>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Add a caption..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ls4-3P-T27">
-                                <rect key="frame" x="16" y="427" width="343" height="183"/>
+                                <rect key="frame" x="16" y="315" width="343" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -169,14 +177,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.24417098445595853" green="0.24417098445595853" blue="0.24417098445595853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="qQg-CL-o9V" appends="YES" id="scr-yJ-3nD"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Compose" id="vMO-97-jbs">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="7SA-bp-Ktf">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ftY-xb-2Gr">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share"/>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="Oac-wx-dyR">
+                            <connections>
+                                <action selector="onShareImage:" destination="GD7-2A-9AV" id="i8R-fQ-wgN"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -188,6 +197,16 @@
                 <tapGestureRecognizer id="FRU-gY-KpG">
                     <connections>
                         <action selector="onImageClick:" destination="GD7-2A-9AV" id="nUy-lU-7vi"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="CBw-tq-wm7">
+                    <connections>
+                        <action selector="onImageSwipe:" destination="GD7-2A-9AV" id="fac-Dn-Fz5"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="qQg-CL-o9V">
+                    <connections>
+                        <action selector="onScreenTap:" destination="GD7-2A-9AV" id="nmQ-uA-o1v"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

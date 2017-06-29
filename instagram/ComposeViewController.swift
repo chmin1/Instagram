@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -14,33 +15,51 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var captionLabel: UITextView!
     
+    var postedImage = UIImage(named: "imageName")
+    var postCaption = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onScreenTap(_ sender: Any) {
+        view.endEditing(true)
+    }
     
     @IBAction func onImageClick(_ sender: Any) {
         let vc = UIImagePickerController()
         vc.delegate = self
         vc.allowsEditing = true
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            print("Camera is available 📸")
-            vc.sourceType = .camera
-        } else {
-            print("Camera 🚫 available so we will use photo library instead")
-            vc.sourceType = .photoLibrary
-        }
+        vc.sourceType = .camera
         present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func onImageSwipe(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.delegate = self
+        vc.allowsEditing = true
+        vc.sourceType = .photoLibrary
+        present(vc, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func onShareImage(_ sender: Any) {
+        postCaption = captionLabel.text ?? ""
+        Post.postUserImage(image: postedImage, withCaption: postCaption) { ( status: Bool, error: Error?) in
+            self.captionLabel.text = nil
+            self.postImage.image = nil
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
         // Get the image captured by the UIImagePickerController
         let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        //let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
+        let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
         
+        postedImage = editedImage
         postImage.image = originalImage
         
         // Dismiss UIImagePickerController to go back to your original view controller
