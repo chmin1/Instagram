@@ -34,7 +34,7 @@ class DetailViewController: UIViewController {
         
         if let date = posts.createdAt {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .medium
+            dateFormatter.dateStyle = .short
             dateFormatter.timeStyle = .short
             let dateString = dateFormatter.string(from: date)
             timeStampLabel.text = dateString
